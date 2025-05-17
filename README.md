@@ -1,12 +1,23 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto em React com formulário de comentários. Permite adicionar um email e comentário, salvando tudo em memória (estado), com exibição em ordem do mais recente para o mais antigo.
 
-Currently, two official plugins are available:
+## ✅ Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Campo de email e comentário
+- Validação simples
+- Comentários exibidos logo abaixo
+- Mensagem caso não haja comentários
 
-## Expanding the ESLint configuration
+## 🧪 Tecnologias
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- CSS Modules
+
+## ▶️ Como rodar
+
+```bash
+npm install
+npm run dev
+
+https://feed-de-comentarios-zeta.vercel.app/
