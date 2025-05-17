@@ -1,0 +1,19 @@
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #efefef;
+  border-radius: 6px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.empty {
+  margin-top: 20px;
+  font-style: italic;
+  color: #444;
+}
