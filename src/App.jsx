@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import CommentForm from "./components/CommentForm";
+import CommentList from "./components/CommentList";
+import styles from "./App.module.css";
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [comments, setComments] = useState([]);
+
+  const addComment = (email, content) => {
+    const newComment = {
+      id: Date.now(),
+      email,
+      content,
+      date: new Date(),
+    };
+    setComments((prev) => [newComment, ...prev]);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className={styles.container}>
+      <h2 className={styles.title}>Seção de Comentários</h2>
+      <CommentForm onAddComment={addComment} />
+      {comments.length === 0 ? (
+        <p className={styles.empty}>Seja o primeiro a comentar!</p>
+      ) : (
+        <CommentList comments={comments} />
+      )}
+    </div>
+  );
 }
 
-export default App
+export default App;
