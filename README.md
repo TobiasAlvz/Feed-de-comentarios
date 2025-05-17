@@ -19,3 +19,5 @@ Projeto em React com formulário de comentários. Permite adicionar um email e c
 ```bash
 npm install
 npm run dev
+
+https://feed-de-comentarios-zeta.vercel.app/
