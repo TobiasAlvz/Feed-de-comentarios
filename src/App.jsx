@@ -5,9 +5,7 @@ import styles from "./App.module.css";
 
 export default function App() {
   const [comments, setComments] = useState([]);
-
   
- 
   const addComment = (email, content) => {
     const newComment = {
       id: Date.now(),
